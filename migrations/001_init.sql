@@ -1,0 +1,15 @@
+CREATE DATABASE IF NOT EXISTS nasdb;
+USE nasdb;
+
+CREATE TABLE users (
+  id CHAR(36) PRIMARY KEY,
+  username VARCHAR(100) UNIQUE NOT NULL,
+  password_hash TEXT NOT NULL,
+  role ENUM('admin','user') NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE settings (
+  k VARCHAR(100) PRIMARY KEY,
+  v TEXT NOT NULL
+);

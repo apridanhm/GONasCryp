@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+database:
+  dsn: "nas:naspassword@tcp(127.0.0.1:3306)/nasdb?parseTime=true"
+
+security:
+  admin_username: "admin"
+  admin_password: "admin123"
+
+storage:
+  default_path: "/home/storageNAS"

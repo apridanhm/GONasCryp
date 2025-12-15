@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - Secure NAS</title>
+</head>
+<body>
+<h2>Welcome, {{ .role }}!</h2>
+<p>User ID: {{ .user_id }}</p>
+<form method="POST" action="/logout">
+  <button type="submit">Logout</button>
+</form>
+</body>
+</html>
